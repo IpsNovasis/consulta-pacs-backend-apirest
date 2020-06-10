@@ -1,0 +1,31 @@
+myapp:
+  properties:
+    spLogin: spLogin
+    spMensajeriaPacs: spMensajeriaPacs
+    spElegibiliddPacs: spElegibiliddPacs
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=dbPACS
+    username: sa
+    password: gab97dan99
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jackson:
+    serialization:
+      indent-output: true
+  application:
+    name: consulta-pacs-backend-apirest
+server:
+  port: 8150
+info:
+  version: "v1"
+#Metricas de Actuator.
+#management.endpoints.web.exposure.include: health,info,metrics
+#management.endpoint.health.show-details: always  
+#Servidor Eureka 
+#eureka:
+#  client:
+#    registerWithEureka: true
+#    serviceUrl:
+#     defaultZone: http://localhost:1111/
+      
+      
